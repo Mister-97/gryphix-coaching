@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gryphix Coaching | Strength For Your Next Step</title>
+    <title>Gryphix Coaching | Strength For Your Mext Step</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -323,7 +323,14 @@
             position: absolute;
             inset: 0;
             background: url("https://i.imgur.com/QhvPwZU.jpeg") center/cover;
-            opacity: 0.9;
+            opacity: 1;
+        }
+        
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(26, 61, 52, 0.3) 100%);
         }
 
         .floating-card {
@@ -1447,6 +1454,48 @@
             .hero-image {
                 height: 400px;
             }
+            
+            /* Reposition floating cards on mobile to not block face */
+            .floating-card {
+                padding: 0.5rem 0.8rem;
+            }
+            
+            .floating-card .icon {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .floating-card .icon svg {
+                width: 14px;
+                height: 14px;
+            }
+            
+            .floating-card .text strong {
+                font-size: 0.75rem;
+            }
+            
+            .floating-card .text span {
+                font-size: 0.65rem;
+            }
+            
+            .floating-card.card-1 {
+                top: auto;
+                bottom: 55%;
+                left: -3%;
+                right: auto;
+            }
+            
+            .floating-card.card-2 {
+                bottom: 8%;
+                right: 2%;
+                left: auto;
+            }
+            
+            .floating-card.card-3 {
+                bottom: 30%;
+                left: -3%;
+                right: auto;
+            }
 
             .stats-bar {
                 grid-template-columns: 1fr;
@@ -1915,7 +1964,7 @@
             <div class="footer-column">
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="mailto:support@Gryphix.com">support@Gryphix.com</a></li>
+                    <li><a href="mailto:hello@griffithcoaching.com">hello@griffithcoaching.com</a></li>
                     <li><a href="#">Book a Free Call</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
