@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gryphix Coaching | Strength For Your Next Step</title>
+    <title>Gryphix Coaching Development | Strength For Your Next Step</title>
+    <meta name="description" content="Transform your life through personalized virtual coaching. Connect with expert life coaching from anywhere. Book your free discovery call today.">
+    <meta property="og:title" content="Gryphix Coaching Development | Strength For Your Next Step">
+    <meta property="og:description" content="Transform your life through personalized virtual coaching. Unlock your potential, overcome obstacles, and create the life you've always envisioned.">
+    <meta property="og:image" content="https://images2.imgbox.com/d3/c7/uYMrDMEi_o.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gryphix Coaching Development | Strength For Your Next Step">
+    <meta name="twitter:description" content="Transform your life through personalized virtual coaching. Unlock your potential, overcome obstacles, and create the life you've always envisioned.">
+    <meta name="twitter:image" content="https://images2.imgbox.com/d3/c7/uYMrDMEi_o.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -175,21 +184,6 @@
         .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; }
         .footer-column a:hover { color: var(--terracotta-light); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; font-size: 0.9rem; opacity: 0.7; }
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.4s ease; }
-        .modal-overlay.active { opacity: 1; visibility: visible; }
-        .modal { background: var(--warm-white); border-radius: 25px; padding: 3rem; max-width: 500px; width: 90%; position: relative; transform: translateY(30px); transition: all 0.4s ease; }
-        .modal-overlay.active .modal { transform: translateY(0); }
-        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 40px; height: 40px; background: var(--cream); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
-        .modal-close:hover { background: var(--terracotta); color: var(--cream); }
-        .modal h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--deep-forest); margin-bottom: 0.5rem; }
-        .modal > p { color: var(--charcoal); opacity: 0.7; margin-bottom: 2rem; }
-        .modal-form { display: flex; flex-direction: column; gap: 1.25rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        .form-group label { font-size: 0.9rem; color: var(--deep-forest); font-weight: 500; }
-        .form-group input, .form-group textarea, .form-group select { padding: 1rem 1.25rem; border: 2px solid rgba(26, 61, 52, 0.15); border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 1rem; background: var(--cream); transition: all 0.3s ease; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--terracotta); }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .modal .btn-primary { width: 100%; justify-content: center; margin-top: 0.5rem; }
         @media (max-width: 1024px) {
             nav { padding: 1.5rem 2rem; }
             .hero { grid-template-columns: 1fr; padding: 8rem 2rem 4rem; text-align: center; }
@@ -246,14 +240,14 @@
 <body>
     <div class="cursor"></div>
     <nav>
-        <a href="#" class="logo">Gryphix Coaching</a>
+        <a href="#" class="logo">Gryphix Coaching Development</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#virtual">Virtual Sessions</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#" class="nav-cta" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Book a Call</a></li>
+            <li><a href="https://calendly.com/jwilmatthews" target="_blank" class="nav-cta">Book a Call</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -266,7 +260,7 @@
             <h1>Transform Your Life <span class="accent">From Anywhere</span></h1>
             <p>Connect with expert life coaching through personalized virtual sessions. Unlock your potential, overcome obstacles, and create the life you've always envisioned.</p>
             <div class="hero-buttons">
-                <a href="#" class="btn-primary" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Start Your Journey<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="https://calendly.com/jwilmatthews" target="_blank" class="btn-primary">Start Your Journey<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 <a href="#about" class="btn-secondary">Learn More</a>
             </div>
         </div>
@@ -292,9 +286,9 @@
             <div class="experience-badge"><div class="years">10+</div><span>Years of Impact</span></div>
         </div>
         <div class="about-content">
-            <span class="subtitle">About Gryphix Coaching</span>
+            <span class="subtitle">About Gryphix Coaching Development</span>
             <h2>Your Partner in Personal Transformation</h2>
-            <p>At Gryphix Coaching, we believe everyone has the power to create extraordinary change in their lives. Through personalized virtual coaching sessions, we help you bridge the gap between where you are and where you want to be.</p>
+            <p>At Gryphix Coaching Development, we believe everyone has the power to create extraordinary change in their lives. Through personalized virtual coaching sessions, we help you bridge the gap between where you are and where you want to be.</p>
             <p>Our approach combines proven coaching methodologies with genuine human connection, all delivered through the convenience of online sessions that fit your schedule.</p>
             <p class="inclusive-statement">This is an inclusive space where all are welcome.</p>
             <div class="about-features">
@@ -323,9 +317,9 @@
     <section class="services" id="services">
         <div class="services-header"><span class="subtitle">What We Offer</span><h2>Coaching Programs Designed for You</h2></div>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><h3>Personal Growth</h3><p>Discover your true potential and develop the mindset, habits, and skills needed to thrive in every area of your life.</p><a href="#" class="service-link" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3>Career Advancement</h3><p>Navigate career transitions, develop leadership skills, and create a professional life aligned with your values and goals.</p><a href="#" class="service-link" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Leadership Development</h3><p>Build your leadership capacity through individual or group coaching sessions. Work through proven frameworks and apply lessons to your unique circumstances.</p><a href="#" class="service-link" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><h3>Personal Growth</h3><p>Discover your true potential and develop the mindset, habits, and skills needed to thrive in every area of your life.</p><a href="https://calendly.com/jwilmatthews" target="_blank" class="service-link">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3>Career Advancement</h3><p>Navigate career transitions, develop leadership skills, and create a professional life aligned with your values and goals.</p><a href="https://calendly.com/jwilmatthews" target="_blank" class="service-link">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Leadership Development</h3><p>Build your leadership capacity through individual or group coaching sessions. Work through proven frameworks and apply lessons to your unique circumstances.</p><a href="https://calendly.com/jwilmatthews" target="_blank" class="service-link">Get Started<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
     </section>
     <section class="process" id="process">
@@ -362,36 +356,22 @@
             <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>Free Discovery Session</div>
             <h2>Ready to Start Your Transformation?</h2>
             <p>Book your complimentary 20-minute discovery call today. No pressure, just a conversation about your goals and how we can help you achieve them.</p>
-            <a href="#" class="btn-primary" href="https://calendly.com/jwilmatthews?lid=ygjvde2x51fh&utm_medium=email&utm_source=braze&utm_campaign=2024Q4-NUR-TRIAL-ONB-ALL_ROLES-EN-Pers_Core_Onboarding&utm_content=user_url_text" target="_blank">Book Your Free Call<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="https://calendly.com/jwilmatthews" target="_blank" class="btn-primary">Book Your Free Call<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
     </section>
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo">Gryphix Coaching</a>
+                <a href="#" class="logo">Gryphix Coaching Development</a>
                 <p>Transforming lives through personalized virtual coaching. Connect from anywhere, achieve everywhere.</p>
                 <div class="footer-social"><a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div>
             </div>
             <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#virtual">Virtual Sessions</a></li><li><a href="#services">Services</a></li><li><a href="#testimonials">Testimonials</a></li></ul></div>
             <div class="footer-column"><h4>Services</h4><ul><li><a href="#">Personal Growth</a></li><li><a href="#">Career Coaching</a></li><li><a href="#">Leadership Development</a></li><li><a href="#">Executive Coaching</a></li></ul></div>
-            <div class="footer-column"><h4>Contact</h4><ul><li><a href="mailto:hello@gryphixcoachingdevelopment.com">hello@gryphixcoachingdevelopment.com</a></li><li><a href="#">Book a Free Call</a></li><li><a href="#">FAQ</a></li></ul></div>
+            <div class="footer-column"><h4>Contact</h4><ul><li><a href="mailto:hello@gryphixcoachingdevelopment.com">hello@gryphixcoachingdevelopment.com</a></li><li><a href="https://calendly.com/jwilmatthews" target="_blank">Book a Free Call</a></li><li><a href="#">FAQ</a></li></ul></div>
         </div>
-        <div class="footer-bottom"><p>© 2025 Gryphix Coaching. All rights reserved.</p><p>Privacy Policy | Terms of Service</p></div>
+        <div class="footer-bottom"><p>© 2025 Gryphix Coaching Development. All rights reserved.</p><p>Privacy Policy | Terms of Service</p></div>
     </footer>
-    <div class="modal-overlay" id="modal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeModal()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-            <h3>Book Your Free Discovery Call</h3>
-            <p>Take the first step toward transformation. We'll reach out within 24 hours.</p>
-            <form class="modal-form" onsubmit="handleSubmit(event)">
-                <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required placeholder="Your name"></div>
-                <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required placeholder="your@email.com"></div>
-                <div class="form-group"><label for="focus">What would you like to focus on?</label><select id="focus" name="focus"><option value="">Select an area</option><option value="personal">Personal Growth</option><option value="career">Career Advancement</option><option value="leadership">Leadership Development</option><option value="other">Other</option></select></div>
-                <div class="form-group"><label for="message">Tell us about your goals (optional)</label><textarea id="message" name="message" placeholder="What would you like to achieve?"></textarea></div>
-                <button type="submit" class="btn-primary">Request My Free Call<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            </form>
-        </div>
-    </div>
     <script>
         const cursor = document.querySelector('.cursor');
         document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX - 10 + 'px'; cursor.style.top = e.clientY - 10 + 'px'; });
@@ -399,10 +379,6 @@
         window.addEventListener('scroll', () => { const nav = document.querySelector('nav'); if (window.scrollY > 50) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); } });
         function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }
         document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('active'); }); });
-        function openModal() { event.preventDefault(); document.getElementById('modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeModal() { document.getElementById('modal').classList.remove('active'); document.body.style.overflow = ''; }
-        document.getElementById('modal').addEventListener('click', (e) => { if (e.target === e.currentTarget) { closeModal(); } });
-        function handleSubmit(e) { e.preventDefault(); alert('Thank you! We\'ll be in touch within 24 hours to schedule your free discovery call.'); closeModal(); }
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, observerOptions);
         document.querySelectorAll('.service-card, .process-step, .testimonial-card, .about-feature').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'all 0.6s ease'; observer.observe(el); });
