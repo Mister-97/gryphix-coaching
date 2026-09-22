@@ -53,6 +53,15 @@ nav.scrolled { padding: 1rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
 .floating-card.card-1 { top: 15%; right: 0; left: auto; animation-delay: 0s; }
 .floating-card.card-2 { bottom: 20%; right: 0; animation-delay: 1s; }
 .floating-card.card-3 { bottom: 35%; left: 0; animation-delay: 2s; }
+/* Desktop-only nudge: card-1 (Live Video Sessions) and card-2 (Flexible
+   Scheduling) further right, card-3 (Proven Results) further left. Scoped
+   above the 1024px breakpoint since that and 768px already have their own
+   positioning overrides below. */
+@media (min-width: 1025px) {
+    .floating-card.card-1 { right: -28px; }
+    .floating-card.card-2 { right: -28px; }
+    .floating-card.card-3 { left: -28px; }
+}
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 .floating-card .icon { width: 40px; height: 40px; background: var(--sage-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
 .floating-card .icon svg { width: 20px; height: 20px; stroke: var(--deep-forest); }
