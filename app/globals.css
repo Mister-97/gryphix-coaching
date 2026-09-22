@@ -58,9 +58,9 @@ nav.scrolled { padding: 1rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
    above the 1024px breakpoint since that and 768px already have their own
    positioning overrides below. */
 @media (min-width: 1025px) {
-    .floating-card.card-1 { right: -28px; }
-    .floating-card.card-2 { right: -28px; }
-    .floating-card.card-3 { left: -28px; }
+    .floating-card.card-1 { right: -56px; }
+    .floating-card.card-2 { right: -56px; }
+    .floating-card.card-3 { left: -56px; }
 }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 .floating-card .icon { width: 40px; height: 40px; background: var(--sage-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
