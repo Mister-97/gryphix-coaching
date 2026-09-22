@@ -88,8 +88,9 @@ nav.scrolled { padding: 1rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
 .about-content .inclusive-statement { font-style: italic; color: var(--deep-forest); font-weight: 500; opacity: 1; }
 .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .about-feature { display: flex; align-items: flex-start; gap: 1rem; }
-.founder { padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; background: var(--cream); }
-.founder-image { position: sticky; top: 120px; width: 380px; margin-left: auto; }
+.founder { padding: 8rem 4rem; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 4rem; align-items: start; background: var(--cream); }
+.founder-content { max-width: 640px; }
+.founder-image { position: sticky; top: 120px; width: 100%; }
 .founder-image-main { width: 100%; aspect-ratio: 2 / 3; background: linear-gradient(145deg, var(--sage-light) 0%, var(--sage) 100%); border-radius: 20px; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(26, 61, 52, 0.15); }
 .founder-image-main::before { content: ''; position: absolute; inset: 0; background: url("/images/founder.webp") center/cover; }
 .founder-badge { z-index: 2; }
