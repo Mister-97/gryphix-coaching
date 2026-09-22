@@ -88,10 +88,11 @@ nav.scrolled { padding: 1rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
 .about-content .inclusive-statement { font-style: italic; color: var(--deep-forest); font-weight: 500; opacity: 1; }
 .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .about-feature { display: flex; align-items: flex-start; gap: 1rem; }
-.founder { padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; background: var(--cream); }
-.founder-image { position: relative; }
-.founder-image-main { width: 100%; height: 550px; background: linear-gradient(145deg, var(--sage-light) 0%, var(--sage) 100%); border-radius: 20px; position: relative; overflow: hidden; }
+.founder { padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; background: var(--cream); }
+.founder-image { position: sticky; top: 120px; }
+.founder-image-main { width: 100%; aspect-ratio: 2 / 3; background: linear-gradient(145deg, var(--sage-light) 0%, var(--sage) 100%); border-radius: 20px; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(26, 61, 52, 0.15); }
 .founder-image-main::before { content: ''; position: absolute; inset: 0; background: url("/images/founder.webp") center/cover; }
+.founder-badge { z-index: 2; }
 .founder-accent { position: absolute; width: 200px; height: 200px; background: var(--terracotta-light); border-radius: 50%; top: -50px; left: -50px; z-index: -1; }
 .founder-badge { position: absolute; bottom: 30px; right: -30px; background: var(--warm-white); padding: 1.5rem 2rem; border-radius: 15px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); text-align: center; }
 .founder-badge .years { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--deep-forest); line-height: 1; }
@@ -207,7 +208,7 @@ footer { background: var(--charcoal); padding: 5rem 4rem 2rem; color: var(--crea
     .about { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
     .about-image { order: -1; }
     .founder { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
-    .founder-image { order: -1; }
+    .founder-image { order: -1; position: static; }
     .virtual { padding: 5rem 2rem; }
     .virtual-showcase { grid-template-columns: 1fr; gap: 3rem; }
     .services { padding: 5rem 2rem; }
