@@ -173,7 +173,7 @@ footer { background: var(--charcoal); padding: 5rem 4rem 2rem; color: var(--crea
 .footer-brand .logo { color: var(--cream); margin-bottom: 1.5rem; display: inline-block; }
 .footer-brand p { opacity: 0.7; font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 300px; }
 .footer-social { display: flex; gap: 1rem; }
-.footer-social a { width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+.footer-social a { width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: var(--cream); }
 .footer-social a:hover { background: var(--terracotta); transform: translateY(-3px); }
 .footer-social svg { width: 20px; height: 20px; fill: var(--cream); }
 .footer-column h4 { font-size: 1rem; margin-bottom: 1.5rem; color: var(--cream); }
@@ -182,6 +182,8 @@ footer { background: var(--charcoal); padding: 5rem 4rem 2rem; color: var(--crea
 .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; }
 .footer-column a:hover { color: var(--terracotta-light); padding-left: 5px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; font-size: 0.9rem; opacity: 0.7; }
+.footer-bottom a { color: var(--cream); text-decoration: underline; text-underline-offset: 2px; }
+.footer-bottom a:hover { color: var(--terracotta-light); }
 @media (max-width: 1024px) {
     nav { padding: 1.5rem 2rem; }
     .hero { grid-template-columns: 1fr; padding: 8rem 2rem 4rem; text-align: center; }

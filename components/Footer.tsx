@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <p>&copy; 2026 Gryphix Coaching & Development. All rights reserved.</p>
-        <p>Privacy Policy | Terms of Service</p>
+        <p>Privacy Policy | Terms of Service | <a href="/admin/login">Admin Portal</a></p>
       </div>
     </footer>
   );
