@@ -93,7 +93,7 @@ export default function NewPost() {
           <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Post title" />
         </div>
         <div className="admin-field">
-          <label>Excerpt (shown on the blog list)</label>
+          <label>Description (shown on the blog list)</label>
           <input value={excerpt} onChange={(e) => setExcerpt(e.target.value)} placeholder="One or two sentences" />
         </div>
         <div className="admin-field">
@@ -145,7 +145,7 @@ export default function NewPost() {
               }}
             />
           </label>
-          <p className="admin-hint">Inserts an <code>![](image-url)</code> line at your cursor. Leave a blank line above and below it.</p>
+          <p className="admin-hint">Click where you want the image in the text above, then tap this to drop it in right there.</p>
         </div>
         {uploadError && <p className="admin-error">{uploadError}</p>}
         <button className="btn-primary" onClick={save} disabled={saving || !title}>

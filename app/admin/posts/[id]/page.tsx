@@ -135,7 +135,7 @@ export default function EditPost() {
           <input value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
         <div className="admin-field">
-          <label>Excerpt</label>
+          <label>Description</label>
           <input value={excerpt} onChange={(e) => setExcerpt(e.target.value)} />
         </div>
         <div className="admin-field">
@@ -182,7 +182,7 @@ export default function EditPost() {
               }}
             />
           </label>
-          <p className="admin-hint">Inserts an <code>![](image-url)</code> line at your cursor. Leave a blank line above and below it.</p>
+          <p className="admin-hint">Click where you want the image in the text above, then tap this to drop it in right there.</p>
         </div>
         {uploadError && <p className="admin-error">{uploadError}</p>}
         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
