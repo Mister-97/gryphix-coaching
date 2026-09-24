@@ -18,10 +18,9 @@ export default function Nav() {
       <ul className={`nav-links${menuOpen ? " active" : ""}`}>
         <li><a href="/about" onClick={() => setMenuOpen(false)}>About</a></li>
         <li><a href="/founder" onClick={() => setMenuOpen(false)}>Founder</a></li>
-        <li><a href="/virtual-sessions" onClick={() => setMenuOpen(false)}>Virtual Sessions</a></li>
-        <li><a href="/services" onClick={() => setMenuOpen(false)}>Services</a></li>
-        <li><a href="/process" onClick={() => setMenuOpen(false)}>Process</a></li>
-        <li><a href="/testimonials" onClick={() => setMenuOpen(false)}>Testimonials</a></li>
+        <li><a href="/#virtual" onClick={() => setMenuOpen(false)}>Virtual Sessions</a></li>
+        <li><a href="/#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+        <li><a href="/#process" onClick={() => setMenuOpen(false)}>Process</a></li>
         <li><a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a></li>
         <li>
           <a href="https://calendly.com/gryphixcoaching/30min" target="_blank" className="nav-cta" onClick={() => setMenuOpen(false)}>
