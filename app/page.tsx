@@ -90,11 +90,6 @@ export default function Home() {
               <div className="founder-accent"></div>
               <div className="founder-badge"><div className="years">25+</div><span>Years Leading Teams</span></div>
             </div>
-            <div className="founder-quote">
-              <h4>Why I Coach</h4>
-              <p>If I had experienced the benefits of coaching earlier in my career, I believe I would have grown faster, made better decisions, and navigated challenges with greater confidence and intention. That&apos;s why I&apos;m passionate about helping others accelerate their growth, gain clarity, and reach their potential. Coaching isn&apos;t about having someone give you the answers. It&apos;s about having a partner who helps you discover the right questions, challenge limiting beliefs, and move forward with purpose.</p>
-              <p>This is the work that inspires me every day.</p>
-            </div>
           </div>
           <p>Gryphix Coaching was founded on a simple realization: coaching has the power to change the trajectory of a person&apos;s career and life.</p>
           <p>Throughout my career, I was fortunate to work with leaders who challenged me, supported me, and helped me see potential in myself that I couldn&apos;t always see on my own. Looking back, I often wonder how much faster I could have grown and how much more intentional my career journey could have been if I had access to coaching earlier.</p>
@@ -105,6 +100,11 @@ export default function Home() {
           <p>I believe that leadership is a skill that can be developed, not a trait reserved for a select few. When people invest in their growth, they not only improve their own performance, they positively impact their teams, organizations, and communities.</p>
           <p>My goal is simple: help people become the leaders they aspire to be, faster and with greater clarity than they could on their own.</p>
           <p className="closing-line">Because every great leader deserves someone in their corner.</p>
+          <div className="founder-quote">
+            <h4>Why I Coach</h4>
+            <p>If I had experienced the benefits of coaching earlier in my career, I believe I would have grown faster, made better decisions, and navigated challenges with greater confidence and intention. That&apos;s why I&apos;m passionate about helping others accelerate their growth, gain clarity, and reach their potential. Coaching isn&apos;t about having someone give you the answers. It&apos;s about having a partner who helps you discover the right questions, challenge limiting beliefs, and move forward with purpose.</p>
+            <p>This is the work that inspires me every day.</p>
+          </div>
         </div>
       </section>
 
