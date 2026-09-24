@@ -105,10 +105,12 @@ nav.scrolled { padding: 1rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
 .founder-content .name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--deep-forest); font-weight: 600; margin-bottom: 1.5rem; }
 .founder-content p { color: var(--charcoal); opacity: 0.8; margin-bottom: 1.5rem; font-size: 1.05rem; }
 .founder-content .closing-line { font-style: italic; color: var(--deep-forest); font-weight: 500; opacity: 1; }
-.founder-quote { margin-top: 3rem; background: var(--warm-white); border-left: 4px solid var(--gold); border-radius: 0 15px 15px 0; padding: 1.75rem 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.06); }
-.founder-quote h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--deep-forest); margin-bottom: 1rem; }
-.founder-quote p { color: var(--charcoal); opacity: 0.85; font-size: 1rem; margin-bottom: 1rem; }
-.founder-quote p:last-child { margin-bottom: 0; font-style: italic; color: var(--terracotta); opacity: 1; font-weight: 500; }
+.founder-quote { position: relative; margin-top: 3rem; background: linear-gradient(155deg, var(--deep-forest) 0%, #12271F 100%); border-radius: 20px; padding: 2.5rem 2rem 2rem; box-shadow: 0 25px 60px rgba(26, 61, 52, 0.3); overflow: hidden; }
+.founder-quote::before { content: '\201C'; position: absolute; top: -1.2rem; left: 1.25rem; font-family: 'Cormorant Garamond', serif; font-size: 7rem; line-height: 1; color: var(--gold); opacity: 0.35; pointer-events: none; }
+.founder-quote::after { content: ''; position: absolute; bottom: 0; right: 0; width: 140px; height: 140px; background: var(--sage); opacity: 0.15; border-radius: 50%; transform: translate(40%, 40%); }
+.founder-quote h4 { position: relative; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 1rem; }
+.founder-quote p { position: relative; color: rgba(250, 247, 242, 0.85); opacity: 1; font-size: 1rem; margin-bottom: 1rem; }
+.founder-quote p:last-child { margin-bottom: 0; font-style: italic; color: var(--terracotta-light); font-weight: 500; }
 .about-feature .icon { width: 50px; height: 50px; background: var(--sage-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .about-feature .icon svg { width: 24px; height: 24px; stroke: var(--deep-forest); }
 .about-feature h4 { font-size: 1rem; color: var(--deep-forest); margin-bottom: 0.25rem; }
