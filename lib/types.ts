@@ -4,6 +4,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   content: string;
+  featured_image: string | null;
   status: "draft" | "published";
   published_at: string | null;
   created_at: string;

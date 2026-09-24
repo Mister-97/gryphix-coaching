@@ -19,7 +19,7 @@ export default async function BlogIndex() {
   const supabase = supabaseAdmin();
   const { data: posts } = await supabase
     .from("blog_posts")
-    .select("id, slug, title, excerpt, published_at")
+    .select("id, slug, title, excerpt, featured_image, published_at")
     .eq("status", "published")
     .order("published_at", { ascending: false });
 
@@ -37,6 +37,10 @@ export default async function BlogIndex() {
         ) : (
           posts.map((post) => (
             <a key={post.id} href={`/blog/${post.slug}`} className="blog-card">
+              {post.featured_image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={post.featured_image} alt="" className="blog-card-image" />
+              )}
               <span className="date">{post.published_at ? formatDate(post.published_at) : ""}</span>
               <h2>{post.title}</h2>
               <p>{post.excerpt}</p>

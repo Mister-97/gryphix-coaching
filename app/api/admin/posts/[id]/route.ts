@@ -22,6 +22,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
   if (typeof body.title === "string") update.title = body.title;
   if (typeof body.excerpt === "string") update.excerpt = body.excerpt;
   if (typeof body.content === "string") update.content = body.content;
+  if (typeof body.featured_image === "string" || body.featured_image === null) update.featured_image = body.featured_image;
 
   const isNewlyPublished = body.status === "published" && current.status !== "published";
   if (body.status === "published" || body.status === "draft") {

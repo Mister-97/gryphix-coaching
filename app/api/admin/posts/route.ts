@@ -17,7 +17,7 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => ({}));
-  const { title, excerpt, content } = body;
+  const { title, excerpt, content, featured_image } = body;
   if (!title) return NextResponse.json({ error: "Title required" }, { status: 400 });
 
   const supabase = supabaseAdmin();
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
   const { data, error } = await supabase
     .from("blog_posts")
-    .insert({ title, slug, excerpt: excerpt || "", content: content || "", status: "draft" })
+    .insert({ title, slug, excerpt: excerpt || "", content: content || "", featured_image: featured_image || null, status: "draft" })
     .select()
     .single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
