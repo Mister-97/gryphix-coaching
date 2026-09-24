@@ -23,21 +23,21 @@ export default function Footer() {
         <div className="footer-column">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#founder">Founder</a></li>
-            <li><a href="/#virtual">Virtual Sessions</a></li>
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/#testimonials">Testimonials</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/founder">Founder</a></li>
+            <li><a href="/virtual-sessions">Virtual Sessions</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
             <li><a href="/blog">Blog</a></li>
           </ul>
         </div>
         <div className="footer-column">
           <h4>Services</h4>
           <ul>
-            <li><a href="/#services">Retail Coaching</a></li>
-            <li><a href="/#services">Career Coaching</a></li>
-            <li><a href="/#services">Leadership Development</a></li>
-            <li><a href="/#services">Executive Coaching</a></li>
+            <li><a href="/services">Retail Coaching</a></li>
+            <li><a href="/services">Career Coaching</a></li>
+            <li><a href="/services">Leadership Development</a></li>
+            <li><a href="/services">Executive Coaching</a></li>
           </ul>
         </div>
         <div className="footer-column">
