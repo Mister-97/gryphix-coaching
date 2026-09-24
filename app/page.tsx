@@ -84,6 +84,11 @@ export default function Home() {
         <div className="founder-content">
           <span className="subtitle">Meet the Founder</span>
           <h2>About Me</h2>
+          <div className="founder-image">
+            <div className="founder-image-main"></div>
+            <div className="founder-accent"></div>
+            <div className="founder-badge"><div className="years">25+</div><span>Years Leading Teams</span></div>
+          </div>
           <p>Gryphix Coaching was founded on a simple realization: coaching has the power to change the trajectory of a person&apos;s career and life.</p>
           <p>Throughout my career, I was fortunate to work with leaders who challenged me, supported me, and helped me see potential in myself that I couldn&apos;t always see on my own. Looking back, I often wonder how much faster I could have grown and how much more intentional my career journey could have been if I had access to coaching earlier.</p>
           <p>That realization became the foundation for Gryphix Coaching.</p>
@@ -98,11 +103,6 @@ export default function Home() {
             <p>If I had experienced the benefits of coaching earlier in my career, I believe I would have grown faster, made better decisions, and navigated challenges with greater confidence and intention. That&apos;s why I&apos;m passionate about helping others accelerate their growth, gain clarity, and reach their potential. Coaching isn&apos;t about having someone give you the answers. It&apos;s about having a partner who helps you discover the right questions, challenge limiting beliefs, and move forward with purpose.</p>
             <p>This is the work that inspires me every day.</p>
           </div>
-        </div>
-        <div className="founder-image">
-          <div className="founder-image-main"></div>
-          <div className="founder-accent"></div>
-          <div className="founder-badge"><div className="years">25+</div><span>Years Leading Teams</span></div>
         </div>
       </section>
 
