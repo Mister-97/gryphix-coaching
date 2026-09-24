@@ -16,8 +16,7 @@ export default function Nav() {
     <nav className={scrolled ? "scrolled" : ""}>
       <a href="/" className="logo">Gryphix Coaching & Development</a>
       <ul className={`nav-links${menuOpen ? " active" : ""}`}>
-        <li><a href="/about" onClick={() => setMenuOpen(false)}>About</a></li>
-        <li><a href="/founder" onClick={() => setMenuOpen(false)}>Founder</a></li>
+        <li><a href="/founder" onClick={() => setMenuOpen(false)}>About</a></li>
         <li><a href="/#virtual" onClick={() => setMenuOpen(false)}>Virtual Sessions</a></li>
         <li><a href="/#services" onClick={() => setMenuOpen(false)}>Services</a></li>
         <li><a href="/#process" onClick={() => setMenuOpen(false)}>Process</a></li>
