@@ -1,8 +1,9 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SubscribeForm from "@/components/SubscribeForm";
+import ShareButtons from "@/components/ShareButtons";
 import { supabaseAdmin } from "@/lib/supabase";
-import { renderPostContent } from "@/lib/renderContent";
+import { renderPostBody } from "@/lib/renderContent";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -27,10 +28,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return {};
+  const title = post.meta_title || `${post.title} | Gryphix Coaching`;
+  const description = post.meta_description || post.excerpt || undefined;
+  const url = `https://www.gryphixcoaching.com/blog/${post.slug}`;
   return {
-    title: `${post.title} | Gryphix Coaching`,
-    description: post.excerpt || undefined,
-    openGraph: post.featured_image ? { images: [post.featured_image] } : undefined,
+    title: post.meta_title ? { absolute: post.meta_title } : title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { type: "article", url, title, description, publishedTime: post.published_at ?? undefined, siteName: "Gryphix Coaching & Development" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -50,7 +56,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           // eslint-disable-next-line @next/next/no-img-element
           <img src={post.featured_image} alt="" className="blog-post-featured-image" />
         )}
-        <div className="blog-post-body">{renderPostContent(post.content)}</div>
+        <div className="blog-post-body">{renderPostBody(post.content)}</div>
+        <ShareButtons title={post.title} />
         <SubscribeForm />
       </article>
       <Footer />

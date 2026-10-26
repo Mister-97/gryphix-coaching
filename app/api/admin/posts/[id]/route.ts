@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import { notifySubscribersOfNewPost } from "@/lib/notify";
+import { slugify } from "@/lib/slug";
 
 export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -23,6 +24,17 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
   if (typeof body.excerpt === "string") update.excerpt = body.excerpt;
   if (typeof body.content === "string") update.content = body.content;
   if (typeof body.featured_image === "string" || body.featured_image === null) update.featured_image = body.featured_image;
+
+  if (typeof body.meta_title === "string") update.meta_title = body.meta_title.trim() || null;
+  if (typeof body.meta_description === "string") update.meta_description = body.meta_description.trim() || null;
+  if (typeof body.slug === "string" && body.slug.trim()) {
+    const slug = slugify(body.slug);
+    if (slug !== current.slug) {
+      const { data: clash } = await supabase.from("blog_posts").select("id").eq("slug", slug).neq("id", id).maybeSingle();
+      if (clash) return NextResponse.json({ error: "Another post already uses that URL slug." }, { status: 409 });
+      update.slug = slug;
+    }
+  }
 
   const isNewlyPublished = body.status === "published" && current.status !== "published";
   if (body.status === "published" || body.status === "draft") {

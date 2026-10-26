@@ -17,11 +17,11 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => ({}));
-  const { title, excerpt, content, featured_image } = body;
+  const { title, excerpt, content, featured_image, meta_title, meta_description } = body;
   if (!title) return NextResponse.json({ error: "Title required" }, { status: 400 });
 
   const supabase = supabaseAdmin();
-  const baseSlug = slugify(title);
+  const baseSlug = slugify(typeof body.slug === "string" && body.slug.trim() ? body.slug : title);
   let slug = baseSlug;
   for (let i = 2; i < 50; i++) {
     const { data: existing } = await supabase.from("blog_posts").select("id").eq("slug", slug).maybeSingle();
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
   const { data, error } = await supabase
     .from("blog_posts")
-    .insert({ title, slug, excerpt: excerpt || "", content: content || "", featured_image: featured_image || null, status: "draft" })
+    .insert({ title, slug, excerpt: excerpt || "", content: content || "", featured_image: featured_image || null, meta_title: meta_title || null, meta_description: meta_description || null, status: "draft" })
     .select()
     .single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });

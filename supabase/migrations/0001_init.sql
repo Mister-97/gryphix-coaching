@@ -18,3 +18,5 @@ create table if not exists subscribers (
 );
 
 create index if not exists blog_posts_status_idx on blog_posts (status, published_at desc);
+alter table blog_posts add column if not exists meta_title text;
+alter table blog_posts add column if not exists meta_description text;

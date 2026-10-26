@@ -5,6 +5,8 @@ export type BlogPost = {
   excerpt: string;
   content: string;
   featured_image: string | null;
+  meta_title: string | null;
+  meta_description: string | null;
   status: "draft" | "published";
   published_at: string | null;
   created_at: string;

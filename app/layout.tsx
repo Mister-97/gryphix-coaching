@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorEffect from "@/components/CursorEffect";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Gryphix Coaching & Development | Strength For Your Next Step",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <CursorEffect />
         {children}
+        <Analytics />
       </body>
     </html>
   );

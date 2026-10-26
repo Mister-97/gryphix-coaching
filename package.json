@@ -11,18 +11,26 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1139.0",
     "@supabase/supabase-js": "^2.45.0",
+    "@tiptap/extension-image": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0",
+    "@vercel/analytics": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "jose": "^5.9.0",
     "next": "^15.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "resend": "^4.0.0"
+    "resend": "^4.0.0",
+    "sanitize-html": "^2.18.1",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/sanitize-html": "^2.16.2",
     "typescript": "^5.6.0"
   }
 }
